@@ -1,1 +1,10 @@
-{}
+{
+    "env": {
+        "baseUrl": "https://www.links.hr/hr"
+       },
+    "testFiles": "global/*",
+    "viewportWidth": 1400,
+  "viewportHeight": 900,
+  "chromeWebSecurity": false
+ 
+}

@@ -1,5 +1,13 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "credentails": {
+    "name": "David",
+    "lastName": "Lukic",
+    "email": "zavidaqb@gmail.com",
+    "password": "testpassword123!",
+    "confirmPassword": "testpassword123!"
+	},
+  "urlPaths": {
+		"register": "/register",
+    "login": "/login"
+	}
 }
