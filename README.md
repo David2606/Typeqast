@@ -9,3 +9,5 @@ open vscode navigate to project folder
 open terminal and type : npm install
 
 in terminal type: npm run cypress:open
+
+When Cypress Test Runner is opened click on: register.feature
