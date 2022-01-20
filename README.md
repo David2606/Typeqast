@@ -1,4 +1,4 @@
-# Typeqast
+# Instruction how to run automated tests
 
 create project folder
 
