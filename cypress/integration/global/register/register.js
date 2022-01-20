@@ -98,16 +98,27 @@ And('User is able to login', () => {
 
 And('Verify captcha checkbox', () => {
     cy.frameLoaded('[title=reCAPTCHA]')
-    cy.iframe('[title=reCAPTCHA]').find('#recaptcha-anchor').click()
-    cy.wait(5000)
+    cy.iframe('[title=reCAPTCHA]').find('#recaptcha-anchor').click();
+    cy.wait(5000);
 });
 
 And('Click on login button', () => {
-    registerPage.clickOnPrijaviButton()
+    registerPage.clickOnPrijaviButton();
 });
 
 And('User is logged in', () => {
     registerPage.verifyUserIsLoggedIn(uniqueEmail)
+});
+
+And('User check register as company checkbox', () => {
+    registerPage.checkRegisterAsCompany()
+});
+
+And('User types mandatory company input fileds', () => {
+    registerPage.enterCompanyName();
+    registerPage.enterCompanyOIB();
+    registerPage.enterCompanyCity();
+    registerPage.enterCompanyAddress();
 });
 
 And('User confirm email verification', () => {

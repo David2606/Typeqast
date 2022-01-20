@@ -7,6 +7,15 @@ Feature: Register functionality
         When User clicks on register button
         Then User is successfuly registered
 
+    Scenario: User is able to register as Company with mandatory input fields filled
+        Given User navigates to "register" page
+        And User check register as company checkbox
+        And User types mandatory company input fileds
+        And User types mandatory input fields
+        And User types "valid without clicking on register button" password
+        When User clicks on register button
+        Then User is successfuly registered
+
     Scenario: User is able to register with all data provided
         Given User navigates to "register" page
         And User types mandatory input fields

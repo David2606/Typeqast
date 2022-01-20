@@ -117,7 +117,56 @@ export default class RegisterPage {
         return cy.get('.user-registration > .header-small-menu');
     }
 
+    registerAsCompanyCheckbox() {
+        return cy.get('#RegisterAsCompany');
+    }
+
+    companyName() {
+        return cy.get('#Company');
+    }
+
+    companyOIB() {
+        return cy.get('#CompanyOIB');
+    }
+
+    companyAddress() {
+        return cy.get('#CompanyAddress');
+    }
+
+    companyCity() {
+        return cy.get('[class="ui-autocomplete-input"]').eq(1);
+    }
+
     // methods
+
+    enterCompanyName() {
+        return this.companyName().click()
+            .type('Test')
+            .should('have.value', 'Test');
+    }
+
+    enterCompanyOIB() {
+        return this.companyOIB().click()
+            .type('12345457213')
+            .should('have.value', '12345457213');
+    }
+
+    enterCompanyAddress() {
+        return this.companyAddress().click()
+            .type('Cara Dusana 3')
+            .should('have.value', 'Cara Dusana 3');
+    }
+
+    enterCompanyCity() {
+        return this.companyCity().click()
+            .type('BEOGRAD')
+            .should('have.value', 'BEOGRAD');
+    }
+
+    checkRegisterAsCompany() {
+        return this.registerAsCompanyCheckbox().check();
+    }
+
     typeEmailLoginCredentials(uniqueEmail) {
         return this.emailLoginInputField().type(uniqueEmail);
     }
